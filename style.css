@@ -1,0 +1,25 @@
+/* styles.css */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: #121212;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+canvas {
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
