@@ -338,6 +338,23 @@
                 player.y = canvas.height - player.height;
             }
         });
+            // Move player paddle with touch
+        canvas.addEventListener('touchmove', (e) => {
+            if (!gameRunning || gameOver) return;
+        
+            const rect = canvas.getBoundingClientRect();
+            const touch = e.touches[0]; // Get the first touch point
+            player.y = touch.clientY - rect.top - player.height / 2;
+        
+            // Keep paddle on screen
+            if (player.y < 0) player.y = 0;
+            if (player.y + player.height > canvas.height) {
+                player.y = canvas.height - player.height;
+            }
+        
+            // Prevent default scrolling behavior
+            e.preventDefault();
+        });
 
         // Ball reset
         function resetBall() {
